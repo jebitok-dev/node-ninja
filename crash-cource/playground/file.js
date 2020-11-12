@@ -28,6 +28,13 @@ if(!fs.existsSync('./assets')) {
         }
         console.log('folder created')
     })    
+} else {
+    fs.mkdir('./assets', (err) => {
+        if(err) {
+            console.log(err)
+        }
+        console.log('folder deleted')
+    })
 }
 
 // deleting files 

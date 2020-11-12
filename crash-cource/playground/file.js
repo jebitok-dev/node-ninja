@@ -13,14 +13,21 @@ const fs = require('fs');
 // console.log('last line')
 
 // writing files
-fs.writeFile('././docs/blog1.txt', 'hello world', () => {
-    console.log('file was written')
-})
+// fs.writeFile('././docs/blog1.txt', 'hello world', () => {
+//     console.log('file was written')
+// })
 
-fs.writeFile('././docs/blog12.txt', 'hello again', () => {
-    console.log('file was written')
-})
-// directories
-
+// fs.writeFile('././docs/blog12.txt', 'hello again', () => {
+//     console.log('file was written')
+// })
+// directories -- fol
+if(!fs.existsSync('./assets')) {
+    fs.mkdir('./assets', (err) => {
+        if(err) {
+            console.log(err)
+        }
+        console.log('folder created')
+    })    
+}
 
 // deleting files 

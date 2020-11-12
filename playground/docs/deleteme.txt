@@ -1,0 +1,5 @@
+IP addresses - addresses connected to the computer(series of numbers masked in domain names)
+each computer has a unique address.
+*host computer - lookup IP address associated with the domain (get request)
+communication between browser and client is via http(hyper-text transfer protocol) - set of 
+rules on how languages are used to communicate

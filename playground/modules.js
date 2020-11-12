@@ -1,5 +1,5 @@
 //import several different thimgs or one fro different file
-const {people, age} = require('./playground/people');
+const {people, age} = require('./people');
 
 console.log(people, age);
 

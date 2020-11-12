@@ -6,6 +6,20 @@ const server = http.createServer((req, res) => {
 
     res.setHeader('Content-type', 'text/html');
 
+    // determine path user visits using switch statement
+    let path = './views/';
+    switch(req.url) {
+        case'/':
+            path += 'index.html';
+            break;
+        case '/about':
+            path += 'about.html';
+            break;
+        default:
+            path += '404.html';
+            break;
+    }
+
     fs.readFile('./views/index.html', (err, data) => {
         if(err) {
             console.log(err) //keeps request hanging

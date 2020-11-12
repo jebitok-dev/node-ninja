@@ -3,9 +3,12 @@ const http = require('http');
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method) //run localhost:3000 on browser
 
-    res.setHeader('Content-type', 'text/plain');
+    res.setHeader('Content-type', 'text/html');
 
+    res.write('<head><link rel="stylesheet" href="#"></head>');
     res.write('<p>hello ninjas</p>');
+    res.write('<p>hello again ninjas</p>');
+
     res.end();
 })
 server.listen(3000, 'localhost', () => {

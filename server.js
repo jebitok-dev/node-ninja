@@ -1,7 +1,12 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    console.log('request made')
+    console.log(req.url, req.method) //run localhost:3000 on browser
+
+    res.setHeader('Content-type', 'text/plain');
+
+    res.write('<p>hello ninjas</p>');
+    res.end();
 })
 server.listen(3000, 'localhost', () => {
     console.log('Listening for request on port 3000')

@@ -11,14 +11,27 @@ const server = http.createServer((req, res) => {
     switch(req.url) {
         case'/':
             path += 'index.html';
+            res.statusCode = 200;
+            break;
+        case '/about-me':
+            path += 'about.html';
+            res.statusCode = 200;
             break;
         case '/about':
             path += 'about.html';
+            res.statusCode = 301;
+            res.setHeader('Location', '/about')
+            res.end();
             break;
         default:
             path += '404.html';
+            res.statusCode = 404;
             break;
     }
+
+    //status code
+    //describes type of response sent to the browser
+    // 200 - ok, 301 - resource moved, 404- not found, 
 
     fs.readFile('./views/index.html', (err, data) => {
         if(err) {

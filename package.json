@@ -1,0 +1,25 @@
+{
+  "name": "ninja",
+  "version": "1.0.0",
+  "description": "nodejs crash course by net-ninja",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jebitok-dev/node-ninja.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jebitok-dev/node-ninja/issues"
+  },
+  "homepage": "https://github.com/jebitok-dev/node-ninja#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "nodemon server.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "nodemon": "^2.0.6"
+  }
+}

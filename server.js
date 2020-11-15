@@ -1,8 +1,16 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) => {
-    console.log(req.url, req.method) //run localhost:3000 on browser
+//  lodash
+    const num = _.random(0, 20);
+    console.log(num);
+
+    const greet = _.once(() => {
+        console.log('hello');
+    })
+    greet();
 
     res.setHeader('Content-type', 'text/html');
 
@@ -13,7 +21,7 @@ const server = http.createServer((req, res) => {
             path += 'index.html';
             res.statusCode = 200;
             break;
-        case '/about-me':
+        case '/about-us':
             path += 'about.html';
             res.statusCode = 200;
             break;

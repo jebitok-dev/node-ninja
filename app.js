@@ -25,5 +25,5 @@ app.get('/about-us', (req, res) => {
 
 //404 -- every request not url (at the bottom positioning)
 app.use((req, res) => {
-    res.sendFile('./views/404.html', { root: __dirname})
+    res.status(404).sendFile('./views/404.html', { root: __dirname})
 })

@@ -17,3 +17,13 @@ app.get('/about', (req, res) => {
     // res.send('<p>about page</p>'); //content type
     res.sendFile('./views/about.html', {root: __dirname});
 });
+
+//redirects
+app.get('/about-us', (req, res) => {
+    res.redirect('/about');
+});
+
+//404 -- every request not url (at the bottom positioning)
+app.use((req, res) => {
+    res.sendFile('./views/404.html', { root: __dirname})
+})

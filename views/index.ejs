@@ -24,8 +24,12 @@
         <h2>All Blogs</h2>
 
         <% if(blogs.length > 0) { %>
-            <h3></h3>
-            <p></p>
+            <% blogs.forEach( blog => { %>
+                
+                <h3 class="title"><%= blog.title %></h3>
+                <p><%= blog.snippet %></p>
+
+            <% }) %>
         <% } %>
     </div>
 </body>
